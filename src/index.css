@@ -1,0 +1,175 @@
+:root {
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --gray-light: #f9f9f9;
+  --gray-medium: #e0e0e0;
+  --accent: #bc9c22; /* Subtle Gold */
+  --font-main: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout & Navbar */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-medium);
+  margin-bottom: 3rem;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(128 96 96);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* Shop Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  background: var(--gray-light);
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-medium);
+  margin: 1rem 0;
+}
+
+.quantity-controls button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.quantity-controls input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--gray-medium);
+  border-right: 1px solid var(--gray-medium);
+  font-family: inherit;
+}
+
+.add-btn, .checkout-btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #333;
+}
+
+/* Cart Page */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.cart-item img {
+  width: 100px;
+  margin-right: 2rem;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.cart-summary {
+  margin-top: 3rem;
+  text-align: right;
+  padding-bottom: 5rem;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  letter-spacing: 0.15rem; /* Subtle expansion on hover */
+  background-color: var(--accent); /* That gold we defined */
+}
+
+.home-page h2 {
+  color: rgb(126 78 78 )
+}
+
+.home-page p {
+  color: rgb(73 3 3)
+}
+
+.hero-image img {
+  position: relative; 
+  width: 1332.4px;
+   height: 749.097px;
+    transform: translate(25.5556px, 18.8889px);
+    left: -82px; 
+    top: -10px; 
+    
+} 
