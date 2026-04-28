@@ -3,21 +3,26 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "ignoreDeprecations": "5.0",
+    "skipLibCheck": true,
+
+    /* Change these lines */
+    "moduleResolution": "bundler", // Changed from node10
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vitest/globals", "@testing-library/jest-dom"] 
+    "esModuleInterop": true, // Ensure this is true
+
+    /* Add this to silence deprecation warnings if they persist */
+    "ignoreDeprecations": "5.0", 
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  //"references": [{ "path": "./tsconfig.node.json" }]
 }
