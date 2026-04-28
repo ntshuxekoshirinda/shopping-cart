@@ -1,4 +1,4 @@
-import boutiqueHero from 'src/assets/fav.png';
+import boutiqueHero from '../assets/fav.png';
 const Home = () => {
   return (
     <div className="home-page">
