@@ -1,19 +1,18 @@
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import react from '@vitejs/react-bundle'; // or @vitejs/plugin-react
+import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/setupTests.ts',
-    // Switch pool from 'threads' to 'forks'
-    pool: 'forks',
+    // Move poolOptions inside the 'test' object
     poolOptions: {
-      forks: {
-        singleFork: true, // Run everything in one process
+      threads: {
+        singleThread: true,
       },
     },
-    testTimeout: 15000, // Increase slightly more for safety
+    setupFiles: './src/setupTests.ts', 
   },
 });
